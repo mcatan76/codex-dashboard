@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <nav class="nav-rail" aria-label="Main navigation">
+        <button class="icon-button" aria-label="Home"><img src="assets/icon-01.svg" alt="" /></button>
+        <button class="icon-button" aria-label="Projects"><img src="assets/icon-03.svg" alt="" /></button>
+        <button class="icon-button selected" aria-label="Users"><span class="person-icon" aria-hidden="true"></span></button>
+        <button class="icon-button" aria-label="Settings"><img src="assets/icon-05.svg" alt="" /></button>
+      </nav>
+
+      <section class="content">
+        <header class="page-header">
+          <h1>Users</h1>
+          <p>Manage your team members and permissions</p>
+        </header>
+
+        <div class="toolbar">
+          <div class="filters">
+            <label class="search"><img src="assets/icon-02.svg" alt="" /><input id="search" type="search" placeholder="Search users..." aria-label="Search users" /><img src="assets/icon-06.svg" alt="" /></label>
+            <label class="select-label">Role: <select id="role-filter"><option value="">All</option><option>Admin</option><option>Member</option><option>Viewer</option></select></label>
+            <label class="select-label">Status: <select id="status-filter"><option value="">All</option><option>Active</option><option>Invited</option><option>Suspended</option></select></label>
+          </div>
+          <button class="add-user" id="add-user"><span>+</span> Add User</button>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>User</th><th>Role</th><th>Status</th><th>Last Active</th><th>Actions</th></tr></thead>
+            <tbody id="user-rows"></tbody>
+          </table>
+        </div>
+
+        <footer class="table-footer">
+          <span id="summary">1-8 of 24 users</span>
+          <div class="pagination"><button id="previous" aria-label="Previous page">‹</button><button id="next" aria-label="Next page">›</button></div>
+        </footer>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
